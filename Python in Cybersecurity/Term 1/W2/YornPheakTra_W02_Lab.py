@@ -91,11 +91,21 @@
 
 # Exercise 5:
 
-GPS = (('Phnom Penh', 11.5564, 104.9282),
-        ('Siem Reap', 13.3622, 103.8597), 
-        ('Battambang', 13.0957, 103.2022))
+# GPS = (('Phnom Penh', 11.5564, 104.9282),
+#         ('Siem Reap', 13.3622, 103.8597), 
+#         ('Battambang', 13.0957, 103.2022))
 
 
-for slot in range(len(GPS)):
-    i = 0
-    print(f'City: {GPS[slot][i]}, Latitude: {GPS[slot][i + 1]}, Longitude: {GPS[slot][i + 2]}')
+# for slot in range(len(GPS)):
+#     i = 0
+#     print(f'City: {GPS[slot][i]}, Latitude: {GPS[slot][i + 1]}, Longitude: {GPS[slot][i + 2]}')
+
+
+# Exercise 6:
+
+dic = {1: 10, 2: 20, 3: 30, 4: 40}
+
+squ = lambda x:x*2
+dic ={k:squ(v) for k , v in dic.items()}
+print("The lambda of dic is",dic)
+
