@@ -24,7 +24,7 @@ print('Exercise 3')
 def merge(list1, list2):
     merge_list = list1 + list2
     union_list = []
-    for i in range(int(len(merge_list))):
+    for i in range(len(merge_list)):
         if merge_list[i] not in union_list:
             union_list.append(merge_list[i])
     return union_list
@@ -115,9 +115,11 @@ def merge_dicts(dicts_1, dicts_2):
     new_dicts = {}
     new_dicts.update(dicts_1)
     new_dicts.update(dicts_2)
+    print("new here:", new_dicts)
     
+    # common = dicts_1.keys() & dicts_2.keys()
+    common = []
     common = dicts_1.keys() & dicts_2.keys()
-
     if len(common) > 0:
         for i in common:
             new_dicts[i] = dicts_1[i] + dicts_2[i]
@@ -180,3 +182,4 @@ remove_user(users, 'bob')
 add_user(users, 'tra', 'tra@gmail.com', 'active') # handle duplicate
 update_user_status(users, 'charlie', 'suspended')
 display_users(users)
+
